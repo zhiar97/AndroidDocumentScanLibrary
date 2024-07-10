@@ -131,7 +131,7 @@ public class PickImageFragment extends Fragment {
             boolean isDirectoryCreated = file.getParentFile().mkdirs();
             Log.d("", "openCamera: isDirectoryCreated: " + isDirectoryCreated);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            String aut = getActivity().getPackageName() + ".provider"; // As defined in Manifest
+                String aut = "com.lafargeiq.supplier4545.provider"; // Use your app's provider authority
                 Uri tempFileUri = FileProvider.getUriForFile(getActivity().getApplicationContext(),
                         aut, // As defined in Manifest
                         file);
